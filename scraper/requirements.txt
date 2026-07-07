@@ -1,0 +1,6 @@
+# Helpers the collector script needs. Install with:
+#   pip install -r requirements.txt
+requests>=2.31        # download files and web pages
+openpyxl>=3.1         # read Excel (.xlsx) files  (NCB)
+pdfplumber>=0.11      # read PDF files            (JMMB, First Global, Sagicor)
+beautifulsoup4>=4.12  # read web pages            (Scotia, JN, CWJ, JPS, Infiniti)

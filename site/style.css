@@ -1,0 +1,320 @@
+/* ================================================================
+   Repossessed Jamaica — big, bright and friendly.
+   Everything is large and rounded so it is easy for anyone to use.
+   ================================================================ */
+
+:root {
+  --green: #009b3a;      /* Jamaica green */
+  --gold:  #fed100;      /* Jamaica gold  */
+  --black: #1a1a1a;
+  --ink:   #253238;
+  --paper: #f4f7f6;
+  --card:  #ffffff;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  background: linear-gradient(135deg, var(--green), #007a2d);
+  color: #fff;
+  text-align: center;
+  padding: 26px 16px 30px;
+  border-bottom: 8px solid var(--gold);
+}
+.topbar h1 { margin: 0; font-size: 2.4rem; letter-spacing: .5px; }
+.subtitle { margin: 8px 0 0; font-size: 1.15rem; opacity: .95; }
+
+/* ---------- Example banner ---------- */
+.banner {
+  background: var(--gold);
+  color: var(--black);
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 1.05rem;
+}
+
+/* ---------- Big tabs ---------- */
+.bigtabs {
+  display: flex;
+  gap: 16px;
+  max-width: 820px;
+  margin: 22px auto 6px;
+  padding: 0 16px;
+}
+.tab {
+  flex: 1;
+  cursor: pointer;
+  border: 4px solid transparent;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px 10px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: transform .08s ease, border-color .15s ease;
+}
+.tab:hover { transform: translateY(-3px); }
+.tab-active { border-color: var(--green); }
+.tab-emoji { font-size: 2.6rem; line-height: 1; }
+.tab-label { font-size: 1.25rem; font-weight: 700; }
+.tab-count {
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 2px 14px;
+  font-size: 1rem;
+}
+
+/* ---------- Search ---------- */
+.searchwrap {
+  max-width: 820px;
+  margin: 18px auto;
+  padding: 0 16px;
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  left: 34px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  pointer-events: none;
+}
+#search {
+  width: 100%;
+  padding: 16px 18px 16px 56px;
+  font-size: 1.2rem;
+  border: 3px solid #d7e0dc;
+  border-radius: 999px;
+  outline: none;
+  background: #fff;
+}
+#search:focus { border-color: var(--green); }
+
+/* ---------- Cards ---------- */
+.cards {
+  max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #eef2f0;
+}
+.card-top {
+  background: linear-gradient(135deg, #eef7f1, #dfeede);
+  padding: 20px;
+  text-align: center;
+}
+.card-emoji { font-size: 3rem; }
+.card-body { padding: 16px 18px; flex: 1; display: flex; flex-direction: column; }
+.card-title { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; color: var(--ink); }
+.card-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--green);
+  margin: 2px 0 8px;
+}
+.card-line { margin: 2px 0; color: #48595f; font-size: .98rem; }
+.card-line b { color: var(--ink); }
+.bank-badge {
+  display: inline-block;
+  margin-top: 10px;
+  background: #eef2f0;
+  color: #37474f;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: .85rem;
+  font-weight: 600;
+}
+/* "See all details" button (opens the modal) */
+.btn-details {
+  margin-top: 12px;
+  align-self: flex-start;
+  background: #eef7f1;
+  color: var(--green);
+  border: 2px solid #cfe8d8;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .12s ease;
+}
+.btn-details:hover { background: #dff0e6; }
+
+/* ---------- Details modal ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 30, 25, 0.55);
+}
+.modal-box {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  width: min(620px, 100%);
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 26px 26px 22px;
+  border-top: 8px solid var(--gold);
+}
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #eef2f0;
+  color: #37474f;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.modal-close:hover { background: #dfe5e2; }
+
+.modal-head { display: flex; gap: 16px; align-items: flex-start; padding-right: 40px; }
+.modal-emoji { font-size: 3rem; line-height: 1; }
+.modal-headtext { display: flex; flex-direction: column; gap: 4px; }
+.modal-title { margin: 0; font-size: 1.55rem; color: var(--ink); }
+.modal-price { font-size: 1.6rem; font-weight: 800; color: var(--green); }
+.modal-headtext .bank-badge { align-self: flex-start; margin-top: 4px; }
+
+.modal-section { margin-top: 20px; }
+.modal-subtitle {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  color: #5b6b70;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.modal-cell {
+  background: #f4f7f6;
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-key { font-size: .8rem; color: #7a8a90; text-transform: uppercase; letter-spacing: .4px; }
+.modal-val { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+
+.modal-table { width: 100%; border-collapse: collapse; }
+.modal-table td { padding: 8px 8px; border-bottom: 1px solid #eef2f0; vertical-align: top; }
+.modal-tkey { font-weight: 700; color: #555; white-space: nowrap; width: 40%; }
+
+.modal-btns { display: flex; gap: 12px; margin-top: 24px; }
+
+/* ---------- Card buttons ---------- */
+.card-btns { display: flex; gap: 10px; padding: 14px 18px 18px; }
+.btn {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 8px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+}
+.btn-go { background: var(--green); color: #fff; }
+.btn-go:hover { background: #007a2d; }
+.btn-dl { background: var(--gold); color: var(--black); }
+.btn-dl:hover { background: #e6be00; }
+.btn.disabled { background: #dfe5e2; color: #9aa5a1; pointer-events: none; }
+
+/* ---------- Empty ---------- */
+.empty { text-align: center; font-size: 1.2rem; padding: 40px 20px; color: #6b7a80; }
+
+/* ---------- Sources ---------- */
+.sources {
+  max-width: 1100px;
+  margin: 10px auto 30px;
+  padding: 24px 16px;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.sources h2 { margin: 0 0 4px; font-size: 1.6rem; }
+.sources-help { margin: 0 0 16px; color: #5b6b70; }
+.source-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.source-card {
+  border: 3px solid #eef2f0;
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+.source-name { font-weight: 700; font-size: 1.05rem; }
+.source-tag {
+  font-size: .8rem;
+  color: #fff;
+  background: #7a8a90;
+  border-radius: 999px;
+  padding: 2px 10px;
+  margin-left: 6px;
+}
+.source-tag.v { background: #2f80ed; }
+.source-tag.p { background: #9b51e0; }
+.source-tag.b { background: #f2994a; }
+.source-btns { display: flex; gap: 10px; margin-top: 12px; }
+.source-btns .btn { font-size: .92rem; padding: 10px 6px; }
+
+/* ---------- Footer ---------- */
+.foot {
+  text-align: center;
+  padding: 24px 16px 40px;
+  color: #6b7a80;
+  font-size: .95rem;
+}
+.foot p { margin: 4px 0; }
+
+/* ---------- Helpers ---------- */
+.hidden { display: none !important; }
+
+@media (max-width: 520px) {
+  .topbar h1 { font-size: 1.8rem; }
+  .tab-label { font-size: 1.05rem; }
+  .card-btns { flex-direction: column; }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repossessed Jamaica — Houses &amp; Cars for Sale</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+</head>
+<body>
+
+  <!-- ======================= TOP ======================= -->
+  <header class="topbar">
+    <h1>🇯🇲 Repossessed Jamaica</h1>
+    <p class="subtitle">Houses and cars the banks are selling — all in one place!</p>
+  </header>
+
+  <!-- Little note that shows when we are still using pretend data -->
+  <div id="exampleBanner" class="banner hidden">
+    👋 This is <b>example</b> data. Run the little program (see README) to load the real lists.
+  </div>
+
+  <!-- ======================= TWO BIG BUTTONS ======================= -->
+  <nav class="bigtabs">
+    <button class="tab tab-active" data-view="properties" id="tabProps">
+      <span class="tab-emoji">🏠</span>
+      <span class="tab-label">Houses &amp; Land</span>
+      <span class="tab-count" id="countProps">0</span>
+    </button>
+    <button class="tab" data-view="vehicles" id="tabVehicles">
+      <span class="tab-emoji">🚗</span>
+      <span class="tab-label">Cars &amp; Trucks</span>
+      <span class="tab-count" id="countVehicles">0</span>
+    </button>
+  </nav>
+
+  <!-- ======================= SEARCH ======================= -->
+  <div class="searchwrap">
+    <span class="search-icon">🔎</span>
+    <input id="search" type="search" placeholder="Type here to find something…" autocomplete="off" />
+  </div>
+
+  <!-- ======================= CARDS ======================= -->
+  <main>
+    <div id="cards" class="cards"></div>
+    <p id="emptyMsg" class="empty hidden">Nothing here yet. Try the other button, or run the program to load the lists. 🙂</p>
+  </main>
+
+  <!-- ======================= SOURCES ======================= -->
+  <section class="sources">
+    <h2>📚 Where does this come from?</h2>
+    <p class="sources-help">Every list below comes straight from a bank or credit union. Click to visit them or save the file.</p>
+    <div id="sourceList" class="source-list"></div>
+  </section>
+
+  <footer class="foot">
+    <p id="generated"></p>
+    <p>Always double-check details with the bank before you buy. ❤️</p>
+  </footer>
+
+  <!-- ======================= DETAILS MODAL ======================= -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box" role="document">
+      <button class="modal-close" data-close aria-label="Close details">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Example data (used only until you run the program). -->
+  <script src="example-data.js"></script>
+  <!-- The real data. After you run the program, data/data.js fills window.REPO_DATA. -->
+  <script src="data/data.js" onerror="void 0"></script>
+  <script src="app.js"></script>
+</body>
+</html>
