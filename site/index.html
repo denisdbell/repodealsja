@@ -3,9 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Repossessed Jamaica — Houses &amp; Cars for Sale</title>
+
+  <!-- ============ SEO: page basics ============ -->
+  <title>Repossessed Jamaica — Repossessed Houses &amp; Cars for Sale</title>
+  <meta name="description" content="Browse repossessed houses, land, cars and trucks for sale by Jamaican banks and credit unions — NCB, JMMB, Sagicor, JN Bank and more — all in one searchable place. Filter by parish, make, price and bank." />
+  <meta name="keywords" content="repossessed cars Jamaica, repossessed houses Jamaica, bank auction Jamaica, private treaty Jamaica, foreclosed property Jamaica, NCB repossessed vehicles, JMMB repossessed, Sagicor repossessed cars" />
+  <meta name="author" content="Repossessed Jamaica" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#009b3a" />
+  <link rel="canonical" href="https://repodealsja.com/" />
+
+  <!-- ============ Open Graph (Facebook, WhatsApp, LinkedIn) ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Repossessed Jamaica" />
+  <meta property="og:title" content="Repossessed Jamaica — Houses &amp; Cars for Sale" />
+  <meta property="og:description" content="All the repossessed houses and cars Jamaican banks are selling, in one friendly, searchable page." />
+  <meta property="og:url" content="https://repodealsja.com/" />
+  <meta property="og:image" content="https://repodealsja.com/og-image.png" />
+  <meta property="og:locale" content="en_JM" />
+
+  <!-- ============ Twitter / X card ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Repossessed Jamaica — Houses &amp; Cars for Sale" />
+  <meta name="twitter:description" content="All the repossessed houses and cars Jamaican banks are selling, in one friendly, searchable page." />
+  <meta name="twitter:image" content="https://repodealsja.com/og-image.png" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ============ Structured data (helps Google understand the site) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Repossessed Jamaica",
+    "url": "https://repodealsja.com/",
+    "description": "Repossessed houses, land, cars and trucks for sale by Jamaican banks and credit unions, gathered into one searchable page.",
+    "inLanguage": "en-JM",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://repodealsja.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ============ Google tag (gtag.js) — GA4 ============ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNVDQKQ516"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WNVDQKQ516');
+  </script>
 </head>
 <body>
 
@@ -13,6 +63,7 @@
   <header class="topbar">
     <h1>🇯🇲 Repossessed Jamaica</h1>
     <p class="subtitle">Houses and cars the banks are selling — all in one place!</p>
+    <a class="topbar-link" href="stats.html">📊 See the statistics</a>
   </header>
 
   <!-- Little note that shows when we are still using pretend data -->
@@ -40,16 +91,25 @@
     <input id="search" type="search" placeholder="Type here to find something…" autocomplete="off" />
   </div>
 
+  <!-- Dropdown filters — app.js fills these from the data, per view -->
+  <div id="filters" class="filters"></div>
+  <div class="filter-bar">
+    <span id="resultCount" class="result-count"></span>
+    <button id="clearFilters" class="clear-filters hidden">✖ Clear filters</button>
+  </div>
+
+  <p class="download-hint">Want a whole bank's list to keep? <a href="#downloads">⬇️ Download the full lists</a></p>
+
   <!-- ======================= CARDS ======================= -->
   <main>
     <div id="cards" class="cards"></div>
     <p id="emptyMsg" class="empty hidden">Nothing here yet. Try the other button, or run the program to load the lists. 🙂</p>
   </main>
 
-  <!-- ======================= SOURCES ======================= -->
-  <section class="sources">
-    <h2>📚 Where does this come from?</h2>
-    <p class="sources-help">Every list below comes straight from a bank or credit union. Click to visit them or save the file.</p>
+  <!-- ======================= SOURCES / DOWNLOADS ======================= -->
+  <section class="sources" id="downloads">
+    <h2>⬇️ Download the full lists</h2>
+    <p class="sources-help">Prefer the original? Each bank and credit union's complete list is here — one place to view it online or save the file. No need to download from every card.</p>
     <div id="sourceList" class="source-list"></div>
   </section>
 

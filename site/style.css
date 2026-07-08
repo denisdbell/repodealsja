@@ -318,3 +318,91 @@ body {
   .tab-label { font-size: 1.05rem; }
   .card-btns { flex-direction: column; }
 }
+
+/* ---------- Dropdown filters ---------- */
+.filters {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.filter-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: var(--card);
+  color: var(--ink);
+  border: 3px solid #e2eae6;
+  border-radius: 999px;
+  padding: 10px 38px 10px 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  /* little chevron on the right */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23009b3a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  transition: border-color .15s ease, transform .08s ease;
+}
+.filter-select:hover { transform: translateY(-2px); }
+.filter-select:focus { outline: none; border-color: var(--green); }
+/* Highlight a dropdown that has an active choice */
+.filter-select.active { border-color: var(--green); }
+
+.filter-bar {
+  max-width: 820px;
+  margin: 12px auto 2px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.result-count { color: var(--ink); opacity: .75; font-weight: 600; }
+.clear-filters {
+  cursor: pointer;
+  background: #fff;
+  color: #b00020;
+  border: 2px solid #f0c8ce;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: .95rem;
+  font-weight: 700;
+}
+.clear-filters:hover { background: #fff2f4; border-color: #b00020; }
+
+/* ---------- Hint that points to the downloads section ---------- */
+.download-hint {
+  max-width: 820px;
+  margin: -6px auto 4px;
+  padding: 0 16px;
+  text-align: center;
+  color: var(--ink);
+  opacity: .85;
+  font-size: 1rem;
+}
+.download-hint a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.download-hint a:hover { text-decoration: underline; }
+
+/* ---------- Link to the statistics page (main page top bar) ---------- */
+.topbar-link {
+  display: inline-block;
+  margin-top: 14px;
+  background: var(--gold);
+  color: var(--black);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+}
+.topbar-link:hover { filter: brightness(1.05); }

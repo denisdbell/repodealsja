@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO: page basics ============ -->
+  <title>Statistics — Repossessed Cars &amp; Houses in Jamaica | Repossessed Jamaica</title>
+  <meta name="description" content="Statistics on repossessed cars and properties for sale in Jamaica: typical prices, most common makes, listings by bank, by parish and by price range — from NCB, JMMB, Sagicor, JN Bank and more." />
+  <meta name="keywords" content="repossessed cars Jamaica statistics, repossessed property prices Jamaica, car prices Jamaica, bank auction stats Jamaica" />
+  <meta name="author" content="Repossessed Jamaica" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0c111b" />
+  <link rel="canonical" href="https://repodealsja.com/stats.html" />
+
+  <!-- ============ Open Graph ============ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Repossessed Jamaica" />
+  <meta property="og:title" content="Statistics — Repossessed Cars &amp; Houses in Jamaica" />
+  <meta property="og:description" content="Prices, makes, banks and parishes at a glance for repossessed cars and property in Jamaica." />
+  <meta property="og:url" content="https://repodealsja.com/stats.html" />
+  <meta property="og:image" content="https://repodealsja.com/og-image.png" />
+  <meta property="og:locale" content="en_JM" />
+
+  <!-- ============ Twitter / X card ============ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Statistics — Repossessed Cars &amp; Houses in Jamaica" />
+  <meta name="twitter:description" content="Prices, makes, banks and parishes at a glance for repossessed cars and property in Jamaica." />
+  <meta name="twitter:image" content="https://repodealsja.com/og-image.png" />
+
+  <link rel="stylesheet" href="stats.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ============ Google tag (gtag.js) — GA4 ============ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNVDQKQ516"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-WNVDQKQ516');
+  </script>
+</head>
+<body>
+
+  <!-- ======================= TOP ======================= -->
+  <header class="topbar">
+    <h1>📊 Repossessed Jamaica</h1>
+    <p class="subtitle">Statistics on the houses and cars the banks are selling.</p>
+    <a class="topbar-link" href="index.html">← Back to the listings</a>
+  </header>
+
+  <!-- Little note that shows when we are still using pretend data -->
+  <div id="exampleBanner" class="banner hidden">
+    👋 This is <b>example</b> data. Run the little program (see README) to load the real lists.
+  </div>
+
+  <!-- ======================= TWO BIG BUTTONS ======================= -->
+  <nav class="bigtabs">
+    <button class="tab tab-active" data-view="vehicles" id="tabVehicles">
+      <span class="tab-emoji">🚗</span>
+      <span class="tab-label">Cars &amp; Trucks</span>
+      <span class="tab-count" id="countVehicles">0</span>
+    </button>
+    <button class="tab" data-view="properties" id="tabProps">
+      <span class="tab-emoji">🏠</span>
+      <span class="tab-label">Houses &amp; Land</span>
+      <span class="tab-count" id="countProps">0</span>
+    </button>
+  </nav>
+
+  <!-- ======================= STATS ======================= -->
+  <main class="stats-main">
+    <!-- Big summary numbers -->
+    <section id="summary" class="stat-cards"></section>
+
+    <!-- Charts -->
+    <section id="charts" class="stat-charts"></section>
+
+    <p id="emptyMsg" class="empty hidden">No data to chart yet. Run the program to load the lists. 🙂</p>
+  </main>
+
+  <footer class="foot">
+    <p id="generated"></p>
+    <p>Numbers are worked out from the banks' own lists. Always double-check with the bank. ❤️</p>
+  </footer>
+
+  <!-- Example data (used only until you run the program). -->
+  <script src="example-data.js"></script>
+  <!-- The real data. After you run the program, data/data.js fills window.REPO_DATA. -->
+  <script src="data/data.js" onerror="void 0"></script>
+  <script src="stats.js"></script>
+</body>
+</html>

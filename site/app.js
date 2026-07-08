@@ -10,6 +10,7 @@
 const state = {
   view: "properties",   // which big button is chosen
   search: "",
+  filters: {},          // chosen dropdown criteria, e.g. { make: "Toyota" }
   data: { vehicles: [], properties: [], sources: [], generated: "" },
   isExample: false,
 };
@@ -240,12 +241,150 @@ function sanitizeProperty(item) {
   };
 }
 
+/* ================================================================
+   1b. FACETS & FILTERS — turn each clean row into a few pick-lists
+       (make / year / body / parish / bank / price) so the search bar
+       can offer real dropdowns, pre-filled from the data itself.
+   ================================================================ */
+
+// Jamaican parishes, plus common towns/spellings that map onto one, so the
+// "parish" dropdown stays short and tidy instead of one row per street.
+const PARISHES = [
+  "Kingston", "St. Andrew", "St. Catherine", "Clarendon", "Manchester",
+  "St. Elizabeth", "Westmoreland", "Hanover", "St. James", "Trelawny",
+  "St. Ann", "St. Mary", "Portland", "St. Thomas",
+];
+const PLACE_TO_PARISH = {
+  "st andrew": "St. Andrew", "portmore": "St. Catherine",
+  "st catherine": "St. Catherine", "spanish town": "St. Catherine",
+  "old harbour": "St. Catherine", "linstead": "St. Catherine",
+  "ewarton": "St. Catherine", "may pen": "Clarendon",
+  "mandeville": "Manchester", "montego bay": "St. James",
+  "mobay": "St. James", "ocho rios": "St. Ann", "negril": "Westmoreland",
+  "st ann": "St. Ann", "st mary": "St. Mary", "st thomas": "St. Thomas",
+  "st elizabeth": "St. Elizabeth", "st james": "St. James", "kgn": "Kingston",
+};
+function toParish(text) {
+  const low = " " + cleanStr(text).toLowerCase() + " ";
+  for (const p of PARISHES) if (low.includes(p.toLowerCase())) return p;
+  for (const k in PLACE_TO_PARISH) if (low.includes(k)) return PLACE_TO_PARISH[k];
+  return "";
+}
+
+// Read a price string ("J$2.6M", "J$1,200,000") into a plain number so we can
+// sort it into a price band. US$ prices are left out of the bands.
+function priceNumber(raw) {
+  const s = cleanStr(raw);
+  if (!s || /US\$/i.test(s)) return null;
+  const m = s.match(/([\d,]+(?:\.\d+)?)\s*([MK])?/i);
+  if (!m) return null;
+  let n = parseFloat(m[1].replace(/,/g, ""));
+  if (isNaN(n) || n < 1000) return null;
+  const suf = (m[2] || "").toUpperCase();
+  if (suf === "M") n *= 1e6; else if (suf === "K") n *= 1e3;
+  return n;
+}
+
+// Friendly price bands for the dropdown (different scales for cars vs houses).
+const PRICE_BANDS = {
+  vehicles: [
+    { label: "Under J$1M", test: (n) => n < 1e6 },
+    { label: "J$1M – 2M", test: (n) => n >= 1e6 && n < 2e6 },
+    { label: "J$2M – 3M", test: (n) => n >= 2e6 && n < 3e6 },
+    { label: "J$3M – 5M", test: (n) => n >= 3e6 && n < 5e6 },
+    { label: "J$5M – 8M", test: (n) => n >= 5e6 && n < 8e6 },
+    { label: "Over J$8M", test: (n) => n >= 8e6 },
+  ],
+  properties: [
+    { label: "Under J$10M", test: (n) => n < 10e6 },
+    { label: "J$10M – 25M", test: (n) => n >= 10e6 && n < 25e6 },
+    { label: "J$25M – 50M", test: (n) => n >= 25e6 && n < 50e6 },
+    { label: "J$50M – 100M", test: (n) => n >= 50e6 && n < 100e6 },
+    { label: "Over J$100M", test: (n) => n >= 100e6 },
+  ],
+};
+
+// Which dropdowns each view shows, in order. `key` matches a field on _f.
+const FILTER_DEFS = {
+  vehicles: [
+    { key: "make", label: "Any make", icon: "🏷️" },
+    { key: "year", label: "Any year", icon: "📅", numDesc: true },
+    { key: "body", label: "Any body type", icon: "🚙" },
+    { key: "parish", label: "Any parish", icon: "📍" },
+    { key: "bank", label: "Any bank", icon: "🏦" },
+    { key: "price", label: "Any price", icon: "💰", price: true },
+  ],
+  properties: [
+    { key: "parish", label: "Any parish", icon: "📍" },
+    { key: "type", label: "Any type", icon: "🏘️" },
+    { key: "bank", label: "Any bank", icon: "🏦" },
+    { key: "price", label: "Any price", icon: "💰", price: true },
+  ],
+};
+
+// Fold make spellings onto one canonical name so the dropdown isn't doubled up.
+const MAKE_ALIAS = {
+  "benz": "Mercedes-Benz", "mercedes": "Mercedes-Benz",
+  "mercedes benz": "Mercedes-Benz", "greatwall": "Great Wall",
+  "porshe": "Porsche",
+};
+function normMake(m) {
+  m = cleanStr(m);
+  if (!m) return "";
+  const hit = MAKE_ALIAS[m.toLowerCase()];
+  if (hit) return hit;
+  return m[0].toUpperCase() + m.slice(1);
+}
+
+// Only keep recognised body types — some banks stuff a whole title into the
+// "type" column, which we don't want cluttering the dropdown.
+const BODY_TYPES = [
+  { re: /\bsuv\b|crossover/i, name: "SUV" },
+  { re: /pick.?up/i, name: "Pickup" },
+  { re: /\btruck\b|tipper/i, name: "Truck" },
+  { re: /station\s*wagon|\bwagon\b/i, name: "Station Wagon" },
+  { re: /hatch/i, name: "Hatchback" },
+  { re: /\bsedan\b/i, name: "Sedan" },
+  { re: /\bcoupe\b/i, name: "Coupe" },
+  { re: /\bvan\b|hiace|caravan/i, name: "Van" },
+  { re: /\bbus\b|coaster/i, name: "Bus" },
+  { re: /motor.?cycle|scooter|\bbike\b/i, name: "Motorcycle" },
+  { re: /convertible/i, name: "Convertible" },
+];
+function normBody(text) {
+  const t = cleanStr(text);
+  for (const b of BODY_TYPES) if (b.re.test(t)) return b.name;
+  return "";
+}
+
+// Property type: drop price/number junk, tidy the slashes so "Residential/
+// Agricultural" and "Residential / Agricultural" become one option.
+function normType(text) {
+  const t = cleanStr(text);
+  if (!t || /\$|\d|listing price/i.test(t)) return "";
+  return t.replace(/\s*\/\s*/g, " / ").replace(/\s+/g, " ").trim();
+}
+
+// Build the tidy pick-list values used both for filtering and for the dropdowns.
+function facetsFor(item, kind) {
+  const s = item._s || {};
+  const parish = toParish(s.location || "") || toParish(s.search || "");
+  const bank = cleanStr(item.bank);
+  const price = priceNumber(s.price);
+  if (kind === "vehicle") {
+    return { make: normMake(s.make), year: s.year || "", body: normBody(s.body),
+             parish, bank, price };
+  }
+  return { type: normType(s.type), parish, bank, price };
+}
+
 function sanitizeAll(list, kind) {
   const out = [];
   (list || []).forEach((item) => {
     const s = kind === "vehicle" ? sanitizeVehicle(item) : sanitizeProperty(item);
     if (!s.valid) return;               // drop header rows / empty junk
     item._s = s;
+    item._f = facetsFor(item, kind);
     out.push(item);
   });
   return out;
@@ -308,24 +447,118 @@ function normalise(d) {
   };
 }
 
+// ---- Build the dropdowns for the chosen view, pre-filled from the data ----
+function buildFilters() {
+  const wrap = document.getElementById("filters");
+  if (!wrap) return;
+  wrap.innerHTML = "";
+  const defs = FILTER_DEFS[state.view] || [];
+  const list = state.data[state.view] || [];
+
+  defs.forEach((def) => {
+    const sel = document.createElement("select");
+    sel.className = "filter-select";
+    sel.dataset.key = def.key;
+
+    const first = document.createElement("option");
+    first.value = "";
+    first.textContent = def.icon + " " + def.label;
+    sel.appendChild(first);
+
+    // Gather the distinct, real values for this criterion.
+    let values;
+    if (def.price) {
+      const present = new Set();
+      list.forEach((it) => {
+        const n = it._f.price;
+        if (n == null) return;
+        const band = PRICE_BANDS[state.view].find((b) => b.test(n));
+        if (band) present.add(band.label);
+      });
+      // Keep the natural band order (cheapest first).
+      values = PRICE_BANDS[state.view].map((b) => b.label).filter((l) => present.has(l));
+    } else {
+      const set = new Set();
+      list.forEach((it) => {
+        const v = cleanStr(it._f[def.key]);
+        if (v) set.add(v);
+      });
+      values = [...set];
+      if (def.numDesc) values.sort((a, b) => Number(b) - Number(a));
+      else values.sort((a, b) => a.localeCompare(b));
+    }
+
+    values.forEach((v) => {
+      const o = document.createElement("option");
+      o.value = v;
+      o.textContent = v;
+      sel.appendChild(o);
+    });
+
+    sel.addEventListener("change", () => {
+      if (sel.value) state.filters[def.key] = sel.value;
+      else delete state.filters[def.key];
+      sel.classList.toggle("active", !!sel.value);
+      render();
+    });
+    wrap.appendChild(sel);
+  });
+}
+
+// ---- Does one item pass the free text + the chosen dropdowns? ----
+function matchesFilters(it) {
+  const term = state.search.trim().toLowerCase();
+  if (term) {
+    const hay = it._s ? it._s.search : JSON.stringify(it).toLowerCase();
+    if (!hay.includes(term)) return false;
+  }
+  for (const key in state.filters) {
+    const val = state.filters[key];
+    if (!val) continue;
+    if (key === "price") {
+      const band = PRICE_BANDS[state.view].find((b) => b.label === val);
+      const n = it._f.price;
+      if (n == null || !band || !band.test(n)) return false;
+    } else if (cleanStr(it._f[key]) !== val) {
+      return false;
+    }
+  }
+  return true;
+}
+
 // ---- Draw the cards for the chosen view ----
 function render() {
   const list = state.data[state.view] || [];
-  const term = state.search.trim().toLowerCase();
-  const filtered = term
-    ? list.filter((it) => (it._s ? it._s.search : JSON.stringify(it).toLowerCase())
-        .includes(term))
-    : list;
+  const filtered = list.filter(matchesFilters);
 
   const wrap = document.getElementById("cards");
   wrap.innerHTML = "";
-
   document.getElementById("emptyMsg").classList.toggle("hidden", filtered.length > 0);
-
   filtered.forEach((item) => wrap.appendChild(makeCard(item)));
+
+  // Result count + clear button appear only when something is narrowing the list.
+  const active = state.search.trim() || Object.keys(state.filters).length;
+  const rc = document.getElementById("resultCount");
+  if (rc) {
+    rc.textContent = active
+      ? `Showing ${filtered.length} of ${list.length}`
+      : `${list.length} listed`;
+  }
+  const clear = document.getElementById("clearFilters");
+  if (clear) clear.classList.toggle("hidden", !active);
 
   document.getElementById("countProps").textContent = state.data.properties.length;
   document.getElementById("countVehicles").textContent = state.data.vehicles.length;
+}
+
+// ---- Reset the free text box and every dropdown ----
+function clearFilters() {
+  state.search = "";
+  state.filters = {};
+  const box = document.getElementById("search");
+  if (box) box.value = "";
+  buildFilters();
+  render();
 }
 
 function makeCard(item) {
@@ -361,10 +594,10 @@ function makeCard(item) {
   }
   card.appendChild(body);
 
-  // Two big buttons
+  // One clear action per card. The full list to download lives once in the
+  // "Download the full lists" section, so we don't repeat it on every tile.
   const btns = el("div", "card-btns");
   btns.appendChild(linkBtn("🌐 Visit site", item.parent_url, "btn-go"));
-  btns.appendChild(downloadBtn(item));
   card.appendChild(btns);
 
   return card;
@@ -545,6 +778,8 @@ function setView(view) {
   state.view = view;
   document.getElementById("tabProps").classList.toggle("tab-active", view === "properties");
   document.getElementById("tabVehicles").classList.toggle("tab-active", view === "vehicles");
+  state.filters = {};          // the two views have different criteria
+  buildFilters();
   updateSearchHint();
   render();
 }
@@ -565,12 +800,27 @@ async function start() {
     document.getElementById("generated").textContent = "Lists last updated: " + state.data.generated;
   }
 
+  // Support ?q=… deep links (matches the SearchAction declared in the page's
+  // structured data, so Google can offer a search box straight to results).
+  const q = new URLSearchParams(location.search).get("q");
+  if (q) {
+    state.search = q;
+    const box = document.getElementById("search");
+    if (box) box.value = q;
+    // Land on whichever tab actually has matches for the query.
+    const term = q.toLowerCase();
+    const hits = (l) => l.filter((it) => it._s && it._s.search.includes(term)).length;
+    if (hits(state.data.vehicles) > hits(state.data.properties)) state.view = "vehicles";
+  }
+
   document.getElementById("tabProps").addEventListener("click", () => setView("properties"));
   document.getElementById("tabVehicles").addEventListener("click", () => setView("vehicles"));
   document.getElementById("search").addEventListener("input", (e) => {
     state.search = e.target.value;
     render();
   });
+  const clearBtn = document.getElementById("clearFilters");
+  if (clearBtn) clearBtn.addEventListener("click", clearFilters);
 
   // Modal close: the ✕, the dark backdrop, or the Escape key.
   document.getElementById("modal").addEventListener("click", (e) => {
@@ -580,9 +830,8 @@ async function start() {
     if (e.key === "Escape") closeModal();
   });
 
-  updateSearchHint();
   renderSources();
-  render();
+  setView(state.view);   // sets the active tab, builds filters, hint + renders
 }
 
 start();
