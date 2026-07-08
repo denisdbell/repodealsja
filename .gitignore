@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Build artifact
+site.zip
+
+# Python (scraper)
+__pycache__/
+*.pyc
+scraper/venv/
