@@ -15,6 +15,19 @@ const state = {
   isExample: false,
 };
 
+/* ---- Google AdSense in-feed ads --------------------------------
+   Create an "In-feed" ad unit in your AdSense dashboard (Ads → By ad
+   unit → In-feed ads). Style it to match these listing cards, then
+   paste the two values it gives you — the slot ID (data-ad-slot) and
+   the layout key (data-ad-layout-key) — below. In-feed ad tiles are
+   injected after every AD_EVERY listings. */
+const AD_CLIENT     = "ca-pub-9430876049469822";
+const AD_SLOT       = "REPLACE_WITH_SLOT_ID";    // <-- data-ad-slot
+const AD_LAYOUT_KEY = "REPLACE_WITH_LAYOUT_KEY"; // <-- data-ad-layout-key
+const AD_EVERY      = 8;                          // insert an ad after every N cards
+const AD_ENABLED = () =>
+  AD_SLOT && AD_LAYOUT_KEY && !/^REPLACE/.test(AD_SLOT) && !/^REPLACE/.test(AD_LAYOUT_KEY);
+
 /* ================================================================
    1. SANITISER  — turn every bank's different shape into clean fields
    ----------------------------------------------------------------
@@ -534,7 +547,22 @@ function render() {
   const wrap = document.getElementById("cards");
   wrap.innerHTML = "";
   document.getElementById("emptyMsg").classList.toggle("hidden", filtered.length > 0);
-  filtered.forEach((item) => wrap.appendChild(makeCard(item)));
+
+  const ads = [];
+  filtered.forEach((item, i) => {
+    wrap.appendChild(makeCard(item));
+    // Drop an in-feed ad after every AD_EVERY cards (never as the last tile).
+    if (AD_ENABLED() && (i + 1) % AD_EVERY === 0 && i + 1 < filtered.length) {
+      const ad = makeAdCard();
+      wrap.appendChild(ad);
+      ads.push(ad);
+    }
+  });
+  // Ask AdSense to fill each freshly-inserted slot (elements are now in the DOM).
+  ads.forEach(() => {
+    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); }
+    catch (e) { /* AdSense not loaded (e.g. blocked) — ignore */ }
+  });
 
   // Result count + clear button appear only when something is narrowing the list.
   const active = state.search.trim() || Object.keys(state.filters).length;
@@ -599,6 +627,26 @@ function makeCard(item) {
   const btns = el("div", "card-btns");
   btns.appendChild(linkBtn("🌐 Visit site", item.parent_url, "btn-go"));
   card.appendChild(btns);
+
+  return card;
+}
+
+// A full-width In-feed sponsored tile that AdSense fills once it's in the DOM.
+// In-feed uses format="fluid" + the unit-specific layout key so the rendered
+// ad mimics the shape of the surrounding listing cards.
+function makeAdCard() {
+  const card = el("div", "card card-ad");
+  card.setAttribute("aria-label", "Advertisement");
+  card.appendChild(el("div", "ad-label", "Sponsored"));
+
+  const ins = document.createElement("ins");
+  ins.className = "adsbygoogle";
+  ins.style.display = "block";
+  ins.setAttribute("data-ad-client", AD_CLIENT);
+  ins.setAttribute("data-ad-slot", AD_SLOT);
+  ins.setAttribute("data-ad-format", "fluid");
+  ins.setAttribute("data-ad-layout-key", AD_LAYOUT_KEY);
+  card.appendChild(ins);
 
   return card;
 }

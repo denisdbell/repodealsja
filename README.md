@@ -45,8 +45,19 @@ cd scraper
 python3 -m venv venv
 source venv/bin/activate          # Windows:  venv\Scripts\activate
 pip install -r requirements.txt
-python extract.py
+python refresh.py                 # scrapes the banks AND builds the SEO pages
 ```
+
+`refresh.py` runs the whole pipeline in one go:
+
+1. **`extract.py`** downloads each bank's list and writes `site/data/*.json`.
+2. **`build_seo.py`** reads that JSON and pre-renders the listings into plain
+   HTML so Google, Bing, social previews and AI crawlers can read them without
+   running JavaScript — it updates `site/index.html`, generates `site/cars.html`
+   and `site/houses.html`, and refreshes `site/sitemap.xml`.
+
+(You can still run either step on its own, and `python refresh.py --seo-only`
+rebuilds just the SEO pages from JSON you already have.)
 
 When it finishes it prints a summary like:
 
@@ -77,7 +88,8 @@ Then open **http://localhost:8000** in your browser. Done! 🎉
 ## 🔁 Keeping it fresh
 
 The banks update their lists every month. To refresh, just run
-`python extract.py` again — it re-downloads everything and rewrites the JSON.
+`python refresh.py` again — it re-downloads everything, rewrites the JSON, and
+re-renders the static SEO pages.
 
 If a bank changes a web address, open `scraper/sources.py` and fix that one line.
 

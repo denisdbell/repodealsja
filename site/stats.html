@@ -13,6 +13,12 @@
   <meta name="theme-color" content="#0c111b" />
   <link rel="canonical" href="https://repodealsja.com/stats.html" />
 
+  <!-- ============ Icons & PWA manifest ============ -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <!-- ============ Open Graph ============ -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Repossessed Jamaica" />
@@ -29,7 +35,18 @@
   <meta name="twitter:image" content="https://repodealsja.com/og-image.png" />
 
   <link rel="stylesheet" href="stats.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- ============ Structured data ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://repodealsja.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Statistics", "item": "https://repodealsja.com/stats.html" }
+    ]
+  }
+  </script>
 
   <!-- ============ Google tag (gtag.js) — GA4 ============ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNVDQKQ516"></script>
@@ -39,6 +56,10 @@
     gtag('js', new Date());
     gtag('config', 'G-WNVDQKQ516');
   </script>
+
+  <!-- ============ Google AdSense ============ -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9430876049469822"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 

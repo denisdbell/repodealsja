@@ -13,6 +13,12 @@
   <meta name="theme-color" content="#009b3a" />
   <link rel="canonical" href="https://repodealsja.com/" />
 
+  <!-- ============ Icons & PWA manifest ============ -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
   <!-- ============ Open Graph (Facebook, WhatsApp, LinkedIn) ============ -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Repossessed Jamaica" />
@@ -27,26 +33,1652 @@
   <meta name="twitter:title" content="Repossessed Jamaica — Houses &amp; Cars for Sale" />
   <meta name="twitter:description" content="All the repossessed houses and cars Jamaican banks are selling, in one friendly, searchable page." />
   <meta name="twitter:image" content="https://repodealsja.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Repossessed Jamaica — repossessed houses and cars for sale" />
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <!-- ============ Structured data (helps Google understand the site) ============ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Repossessed Jamaica",
-    "url": "https://repodealsja.com/",
-    "description": "Repossessed houses, land, cars and trucks for sale by Jamaican banks and credit unions, gathered into one searchable page.",
-    "inLanguage": "en-JM",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://repodealsja.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://repodealsja.com/#website",
+        "name": "Repossessed Jamaica",
+        "url": "https://repodealsja.com/",
+        "description": "Repossessed houses, land, cars and trucks for sale by Jamaican banks and credit unions, gathered into one searchable page.",
+        "inLanguage": "en-JM",
+        "publisher": { "@id": "https://repodealsja.com/#org" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://repodealsja.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://repodealsja.com/#org",
+        "name": "Repossessed Jamaica",
+        "url": "https://repodealsja.com/",
+        "logo": "https://repodealsja.com/icon-512.png",
+        "image": "https://repodealsja.com/og-image.png",
+        "areaServed": { "@type": "Country", "name": "Jamaica" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://repodealsja.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a repossessed car or house in Jamaica?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A repossessed car or house is a vehicle or property that a Jamaican bank or credit union has taken back because the previous owner could not keep up the loan payments. The lender then sells it — often by private treaty or auction — to recover the money owed, which is why these listings are frequently priced below the open market."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I buy a repossessed vehicle or property in Jamaica?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Find the listing you want on Repossessed Jamaica, click 'Visit site' to open the bank or credit union's own page, then contact that institution directly to arrange a viewing, make an offer, or place a bid. Always confirm the price, condition and title details with the lender before you buy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which banks and credit unions are included?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Repossessed Jamaica gathers listings from 12 sources, including NCB (National Commercial Bank), JMMB, Sagicor, JN Bank, First Global Bank, Scotiabank, JPS & Employees Co-operative Credit Union and more."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Repossessed Jamaica free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Repossessed Jamaica is completely free. It simply collects the repossessed house and car lists that Jamaican banks already publish and puts them in one searchable place."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
+  <!-- BUILD:ITEMLIST
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Repossessed houses and cars for sale in Jamaica",
+  "url": "https://repodealsja.com/",
+  "numberOfItems": 260,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Lot 95 Orchid Boulevard, Paisley Pen, May Pen, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lot 8 Woodside, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Lot 109D, Part of Denbigh, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Lot 9 Part of 47 Manchester Avenue, Lime Savannah, May Pen, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Land Part of Stewarton called Treadlight, Evans Heights, May Pen, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Land part of Rock Hill, May Pen, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "Land part of Rhules Pen, May Pen, Clarendon",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "8-12 King Street & 2A-10 Temple Lane, Kingston",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "Lot No. 129 (Block 4) Glen Way, Land Part of Ingleside, Mandeville, Manchester",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "Lot 3 Land Part of Williamsfield, Settlement, Manchester",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "Lots 3, 4 & 37 Peter's Rock, Woodford, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "Strata Lot 15, Apartment 207, Block F, Oaklands, 114 1/2 - 116 Constant Spring Road, Kingston 8, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "8 ½ Worthington Terrace, Kingston 5, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "Strata Lot 11 Chateau De Chanel, 15 Seaview Avenue, Kingston 10, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "Lot 16 Heavenly Heights, Cedar Valley, Red Hills, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "Strata Lot 6, \"The Promenade Residential Country Club\", 60 Sunset Avenue, Cherry Gardens, Kingston 8, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "Strata Lot 16, 2 Sandale Drive, Kingston 8, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
+      "name": "Strata Lot #10, 77 Sunrise Crescent, Kingston 19, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 19,
+      "name": "Lot 29 Stony Hill Terrace, Stony Hill, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 20,
+      "name": "Lot 21 Diamond Close, Diamond Court, Stony Hill, Kingston 9, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 21,
+      "name": "Lot #15 Bellevue Drive, Bellevue, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 22,
+      "name": "3 & 5 Laws Street, St. Andrew",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 23,
+      "name": "Strata Lot 39 Crane Ridge Estate, Dacosta Drive, Ocho Rios, St. Ann",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 24,
+      "name": "Lot 93 Home Castle, Section 2, Stewart Town, St. Ann",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 25,
+      "name": "Lot 486 Belle Air Phase 3, Runaway Bay, St. Ann",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 26,
+      "name": "Apt 6 Escape Villas, Part of Crescent Park, Golden Grove P.O, St. Ann",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 27,
+      "name": "Lot 724 Phoenix Park Village 2, Phase 2, Bernard Lodge, Greater Portmore, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 28,
+      "name": "17 Nugent Street, Land Part of Browns Town, Ewarton, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 29,
+      "name": "Part of Cocoa Walk called New Purchase, Barton's, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 30,
+      "name": "Lot 61 Rose Villa Drive, Rose Hall, Linstead, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 31,
+      "name": "Lot 353 Hill Run, Spanish Town, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 32,
+      "name": "Lot # 5 West Montaque Heights, Part of Lot #4 Beckford Farm and Spencers Pen, Spanish Town, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 33,
+      "name": "Cudjoe Hill, Watermount, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 34,
+      "name": "66A Brunswick Ave, Spanish Town, St. Catherine",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 35,
+      "name": "18 Beadle Drive, Santa Cruz, St. Elizabeth",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 36,
+      "name": "Lot 61, 22 Upper Retreat, Windsor Heights, Santa Cruz, St. Elizabeth",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 37,
+      "name": "Part of Lower Works Pen, Black River, St. Elizabeth",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 38,
+      "name": "Land Part of Santa Cruz, Sydney Pagon Drive, Santa Cruz, St. Elizabeth",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 39,
+      "name": "Lot 16 Land part of Cheltenham, St. Elizabeth",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 40,
+      "name": "Comma Pen, Ballards Valley District, Junction, St. Elizabeth",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 41,
+      "name": "Apt A-403 Palmyra Resort & Spa, Rose Hall, St. James",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 42,
+      "name": "Lot 18 East River Close, Spring Valley Estate, Tower Isle, St. Mary",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 43,
+      "name": "Lot 619 East Boulevard, Liberty Estate, Industry Pen, Three Hills, St. Mary",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 44,
+      "name": "Lot #14 Harmony Hall Close, Harmony Hall, Tower Isle, St. Mary",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 45,
+      "name": "Lot 154 Cascade Avenue East Prospect, Morant Bay, St. Thomas",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 46,
+      "name": "Lot no. 51 part of Mount George Pen, Phamphery, Yallahs, St. Thomas",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 47,
+      "name": "Lot 30 Part of Albion, St. Thomas",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 48,
+      "name": "Lot 48 View Point Close, Wiltshire, Trelawny",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 49,
+      "name": "Lot 159 Coral Spring Village, Phase 1, Trelawny",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 50,
+      "name": "Part of Brampton, Trelawny",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 51,
+      "name": "Lot 129 Land part of Troy, Middle New Hope Road, Trelawny",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 52,
+      "name": "Lot 40 Begonia Drive, Westmore Gardens, Savanna-La-Mar, Westmoreland",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 53,
+      "name": "Listing price - $155,000,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 54,
+      "name": "Listing price – $104,000,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 55,
+      "name": "Listing price - $52,500,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 56,
+      "name": "Listing Price – $7,500,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 57,
+      "name": "Listing Price - $61,500,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 58,
+      "name": "Listing Price -$30,500,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 59,
+      "name": "Listing Price - $36,000,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 60,
+      "name": "Listing Price - $63,200,000.00",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 61,
+      "name": "2022 Audi Q5",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 62,
+      "name": "2023 Audi A3",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 63,
+      "name": "2023 Audi A3",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 64,
+      "name": "2023 Audi Q7",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 65,
+      "name": "2014 BMW 320I",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 66,
+      "name": "2017 BMW 420I",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 67,
+      "name": "2019 BMW 430I Cabrio",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 68,
+      "name": "2019 BMW X1",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 69,
+      "name": "2019 BMW X3 - Xdrive",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 70,
+      "name": "2017 BMW X3",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 71,
+      "name": "2021 BMW X4",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 72,
+      "name": "2019 BMW X5",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 73,
+      "name": "2022 BMW X5",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 74,
+      "name": "2020 Ford Ecosport",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 75,
+      "name": "2023 Ford Everest",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 76,
+      "name": "2022 Ford Ranger Rapture",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 77,
+      "name": "2023 Foton Auman",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 78,
+      "name": "2024 Great Wall Haval H6",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 79,
+      "name": "2025 Greatwall Haval",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 80,
+      "name": "2012 Honda Accord",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 81,
+      "name": "2022 Honda Accord",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 82,
+      "name": "2023 Honda BRV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 83,
+      "name": "2024 Honda BRV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 84,
+      "name": "2017 Honda Civic",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 85,
+      "name": "2019 Honda CRV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 86,
+      "name": "2022 Honda CRV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 87,
+      "name": "2022 Honda CRV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 88,
+      "name": "2023 Honda CRV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 89,
+      "name": "2018 Honda Fit",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 90,
+      "name": "2018 Honda Fit Shuttle",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 91,
+      "name": "2018 Honda Fit Shuttle",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 92,
+      "name": "2018 Honda Fit Shuttle",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 93,
+      "name": "2021 Hyundai Santa Fe",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 94,
+      "name": "2022 Hyundai Tucson",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 95,
+      "name": "2023 Hyundai Tucson",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 96,
+      "name": "2024 Hyundai Tucson",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 97,
+      "name": "2018 Jeep Wrangler",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 98,
+      "name": "2022 Kia Seltos",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 99,
+      "name": "2021 Kia Soluto",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 100,
+      "name": "2022 Kia Soluto",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 101,
+      "name": "2022 Kia Soluto",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 102,
+      "name": "2024 Kia Soluto",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 103,
+      "name": "2022 Kia Sonet",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 104,
+      "name": "2023 Kia Sonet",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 105,
+      "name": "2024 Kia Sonet",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 106,
+      "name": "2023 Kia Sorento",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 107,
+      "name": "2023 Kia Sportage",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 108,
+      "name": "2025 Kia Sportage",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 109,
+      "name": "2013 Land Rover Range Rover",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 110,
+      "name": "2018 Land Rover Range Rover",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 111,
+      "name": "2015 Mazda CX5",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 112,
+      "name": "2018 Mercedes Benz GLE43",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 113,
+      "name": "2020 Mercedes Benz CLA35 AMG",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 114,
+      "name": "2018 Nissan AD",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 115,
+      "name": "2014 Nissan Note",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 116,
+      "name": "2022 Porshe Cayenne",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 117,
+      "name": "2021 Sinotruk Tipper Truck",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 118,
+      "name": "2018 Subaru Impreza",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 119,
+      "name": "2013 Subaru Impreza G4",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 120,
+      "name": "2015 Subaru Impreza G4",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 121,
+      "name": "2015 Subaru Impreza G4",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 122,
+      "name": "2015 Subaru Impreza G4",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 123,
+      "name": "2017 Subaru Impreza G4",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 124,
+      "name": "2014 Subaru Impreza Sport",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 125,
+      "name": "2014 Subaru Impreza XV",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 126,
+      "name": "2019 Suzuki Vitara",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 127,
+      "name": "2017 Toyota Aqua",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 128,
+      "name": "2017 Toyota Aqua",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 129,
+      "name": "2018 Toyota Aqua",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 130,
+      "name": "2018 Toyota Aqua",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 131,
+      "name": "2018 Toyota CHR",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 132,
+      "name": "2010 Toyota Corolla Axio",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 133,
+      "name": "2018 Toyota Corolla Axio",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 134,
+      "name": "2020 Toyota Corolla Axio",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 135,
+      "name": "2023 Toyota Corolla Cross",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 136,
+      "name": "2023 Toyota Corolla Cross",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 137,
+      "name": "2017 Toyota Corolla Fielder",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 138,
+      "name": "2022 Toyota Hilux",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 139,
+      "name": "2018 Toyota Vitz",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 140,
+      "name": "2014 Toyota Wish",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 141,
+      "name": "2013 Volkswagen Jetta",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 142,
+      "name": "2020 Volkswagen Tiguan",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 143,
+      "name": "2021 Volkswagen Tiguan",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 144,
+      "name": "2022 Volkswagen Tiguan",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 145,
+      "name": "2023 Volkswagen Tiguan",
+      "url": "https://www.jncb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 146,
+      "name": "2017 Ford Ranger",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 147,
+      "name": "2015 Honda Civic",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 148,
+      "name": "2020 Hyundai Tucson",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 149,
+      "name": "2023 Kia Sorento",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 150,
+      "name": "2017 Mitsubishi Attrage",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 151,
+      "name": "2023 Nissan X-Trail",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 152,
+      "name": "2015 Toyota Probox",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 153,
+      "name": "2022 BMW X6 JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 154,
+      "name": "2020 Hyundai Tucson JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 155,
+      "name": "2021 Hyundai Tucson JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 156,
+      "name": "2022 Kia SOLUTO JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 157,
+      "name": "2022 Kia Sonet JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 158,
+      "name": "2020 Kia Sportage JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 159,
+      "name": "2022 Mitsubishi ASX JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 160,
+      "name": "2026 Nissan Qashqai JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 161,
+      "name": "2016 Volkswagen Jetta JAMZONE",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 162,
+      "name": "2016 Audi A4 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 163,
+      "name": "2019 Audi Q8 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 164,
+      "name": "2020 Audi Q5 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 165,
+      "name": "2022 Audi Q3 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 166,
+      "name": "2023 Audi A4 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 167,
+      "name": "2016 BMW 523D KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 168,
+      "name": "2017 BMW X1 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 169,
+      "name": "2018 BMW X1 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 170,
+      "name": "2018 BMW X5 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 171,
+      "name": "2019 BMW X4 KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 172,
+      "name": "2020 BMW 330i KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 173,
+      "name": "2022 Mini John Cooper",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 174,
+      "name": "2023 Great Wall HAVAL KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 175,
+      "name": "2024 Great Wall KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 176,
+      "name": "2014 Honda Accord KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 177,
+      "name": "2016 Honda Accord KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 178,
+      "name": "2016 Honda Accord Sport",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 179,
+      "name": "2021 Honda Accord KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 180,
+      "name": "2022 Honda Accord KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 181,
+      "name": "2024 Honda BRV KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 182,
+      "name": "2018 Honda Civic KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 183,
+      "name": "2019 Honda Civic KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 184,
+      "name": "2019 Honda Civic KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 185,
+      "name": "2019 Honda Civic KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 186,
+      "name": "2019 Honda Civic Sport",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 187,
+      "name": "2017 Honda CRV KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 188,
+      "name": "2019 Honda CRV KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 189,
+      "name": "2018 Hyundai Accent KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 190,
+      "name": "2019 Hyundai Creta KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 191,
+      "name": "2020 Hyundai Grand",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 192,
+      "name": "2023 Hyundai Grand",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 193,
+      "name": "2022 Hyundai Palisade KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 194,
+      "name": "2018 Hyundai Tucson KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 195,
+      "name": "2019 Hyundai Tucson KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 196,
+      "name": "2022 Hyundai Tucson KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 197,
+      "name": "2022 Hyundai Venue KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 198,
+      "name": "2022 Hyundai Venue KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 199,
+      "name": "2020 Kia Picanto KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 200,
+      "name": "2019 Kia Rio KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 201,
+      "name": "2020 Kia Rio KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 202,
+      "name": "2018 Kia Sedona Grand",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 203,
+      "name": "2021 Kia Seltos KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 204,
+      "name": "2022 Kia Seltos KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 205,
+      "name": "2022 Kia Seltos KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 206,
+      "name": "2024 Kia Seltos KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 207,
+      "name": "2013 Nissan Juke KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 208,
+      "name": "2021 Porsche Cayenne KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 209,
+      "name": "2013",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 210,
+      "name": "2018 Subaru Impreza",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 211,
+      "name": "2017 Toyota C-HR KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 212,
+      "name": "2020 Toyota HARRIER KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 213,
+      "name": "2022 Toyota Corolla KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 214,
+      "name": "2018",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 215,
+      "name": "2017",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 216,
+      "name": "2017",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 217,
+      "name": "2021 Volkswagen Tiguan KACS",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 218,
+      "name": "2022",
+      "url": "https://www.jmmb.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 219,
+      "name": "2020 Honda CIVIC",
+      "url": "https://vehicles.jnbank.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 220,
+      "name": "2021 Volkswagen TIGUAN COMFORT",
+      "url": "https://vehicles.jnbank.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 221,
+      "name": "2017 Honda GRACE HYBRID",
+      "url": "https://vehicles.jnbank.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 222,
+      "name": "2018 Honda GRACE LX",
+      "url": "https://vehicles.jnbank.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 223,
+      "name": "2022 Honda FIT DOHC",
+      "url": "https://vehicles.jnbank.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 224,
+      "name": "2021 Nissan SYLPHY",
+      "url": "https://vehicles.jnbank.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 225,
+      "name": "2017 Audi Q5",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 226,
+      "name": "Estimated M.V. $2,800,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 227,
+      "name": "2023 Kia Sportage",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 228,
+      "name": "Estimated M.V. $4,250,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 229,
+      "name": "2016 Honda Accord",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 230,
+      "name": "Estimated M.V. $1,500,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 231,
+      "name": "2019 Toyota CorollaAxio",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 232,
+      "name": "Estimated M.V. $1,650,500.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 233,
+      "name": "2019 Mercedes GLC",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 234,
+      "name": "Estimated M.V. $6,100,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 235,
+      "name": "2026",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 236,
+      "name": "2019 Honda ShuttleHybrid",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 237,
+      "name": "Estimated M.V. $1,950,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 238,
+      "name": "2024 Toyota Hiace",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 239,
+      "name": "Estimated M.V. $7,800,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 240,
+      "name": "2019 Honda Vezel Hybrid",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 241,
+      "name": "Estimated M.V. $3,300,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 242,
+      "name": "2016 Mazda 3",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 243,
+      "name": "Estimated M.V. $1,350,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 244,
+      "name": "2016 Land Rover Range Rover",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 245,
+      "name": "Estimated M.V. $2,700,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 246,
+      "name": "2021 Hyundai Creta",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 247,
+      "name": "Estimated M.V. $3,200,000.00 Kgn. 6, tele #: 485-8881",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 248,
+      "name": "2026",
+      "url": "https://www.sagicor.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 249,
+      "name": "2013 Mini",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 250,
+      "name": "2015 Subaru IMPREZA",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 251,
+      "name": "2014 Land Rover",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 252,
+      "name": "2015 Mercedes",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 253,
+      "name": "2012 Subaru IMPREZA",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 254,
+      "name": "2013 Subaru LEGACY",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 255,
+      "name": "2014 BMW 3 SERIES",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 256,
+      "name": "2016 BMW",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 257,
+      "name": "2019 Honda HRV",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 258,
+      "name": "2009",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 259,
+      "name": "2017 Toyota Corolla Axio",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 260,
+      "name": "2015 Nissan Wingroad UCALS",
+      "url": "https://infiniticuja.com/repossessed-vehicles/"
+    }
+  ]
+}
+  </script>
+      BUILD:ITEMLIST:END -->
 
   <!-- ============ Google tag (gtag.js) — GA4 ============ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNVDQKQ516"></script>
@@ -56,6 +1688,10 @@
     gtag('js', new Date());
     gtag('config', 'G-WNVDQKQ516');
   </script>
+
+  <!-- ============ Google AdSense ============ -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9430876049469822"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -65,6 +1701,17 @@
     <p class="subtitle">Houses and cars the banks are selling — all in one place!</p>
     <a class="topbar-link" href="stats.html">📊 See the statistics</a>
   </header>
+
+  <!-- ======================= INTRO (crawlable copy) ======================= -->
+  <section class="intro">
+    <p>
+      <b>Repossessed Jamaica</b> brings together every <b>repossessed house, plot of land, car and truck</b>
+      currently for sale by Jamaican banks and credit unions — including
+      <b>NCB, JMMB, Sagicor, JN Bank, First Global Bank and Scotiabank</b> — into one free, searchable page.
+      Repossessed listings are often priced below the open market, so browse the deals below, filter by parish,
+      make, bank or price, then head straight to the lender to buy.
+    </p>
+  </section>
 
   <!-- Little note that shows when we are still using pretend data -->
   <div id="exampleBanner" class="banner hidden">
@@ -102,7 +1749,970 @@
 
   <!-- ======================= CARDS ======================= -->
   <main>
-    <div id="cards" class="cards"></div>
+    <div id="cards" class="cards">
+      <!-- BUILD:CARDS
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 95 Orchid Boulevard, Paisley Pen, May Pen, Clarendon</h3>
+          <div class="card-price">J$12M</div>
+          <div class="card-line">📍 <b>Lot 95 Orchid Boulevard, Paisley Pen, May Pen, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 8 Woodside, Clarendon</h3>
+          <div class="card-price">J$57M</div>
+          <div class="card-line">📍 <b>Lot 8 Woodside, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 109D, Part of Denbigh, Clarendon</h3>
+          <div class="card-price">J$39M</div>
+          <div class="card-line">📍 <b>Lot 109D, Part of Denbigh, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 9 Part of 47 Manchester Avenue, Lime Savannah, May Pen, Clarendon</h3>
+          <div class="card-price">J$43M</div>
+          <div class="card-line">📍 <b>Lot 9 Part of 47 Manchester Avenue, Lime Savannah, May Pen, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Land Part of Stewarton called Treadlight, Evans Heights, May Pen, Clarendon</h3>
+          <div class="card-price">J$20M</div>
+          <div class="card-line">📍 <b>Land Part of Stewarton called Treadlight, Evans Heights, May Pen, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Land part of Rock Hill, May Pen, Clarendon</h3>
+          <div class="card-price">J$2M</div>
+          <div class="card-line">📍 <b>Land part of Rock Hill, May Pen, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Land part of Rhules Pen, May Pen, Clarendon</h3>
+          <div class="card-price">J$25M</div>
+          <div class="card-line">📍 <b>Land part of Rhules Pen, May Pen, Clarendon</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🏬</div></div>
+        <div class="card-body">
+          <h3 class="card-title">8-12 King Street &amp; 2A-10 Temple Lane, Kingston</h3>
+          <div class="card-price">J$312M</div>
+          <div class="card-line">📍 <b>8-12 King Street &amp; 2A-10 Temple Lane, Kingston</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot No. 129 (Block 4) Glen Way, Land Part of Ingleside, Mandeville, Manchester</h3>
+          <div class="card-price">J$62M</div>
+          <div class="card-line">📍 <b>Lot No. 129 (Block 4) Glen Way, Land Part of Ingleside, Mandeville, Manchester</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 3 Land Part of Williamsfield, Settlement, Manchester</h3>
+          <div class="card-price">J$26M</div>
+          <div class="card-line">📍 <b>Lot 3 Land Part of Williamsfield, Settlement, Manchester</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lots 3, 4 &amp; 37 Peter&#x27;s Rock, Woodford, St. Andrew</h3>
+          <div class="card-price">J$85M</div>
+          <div class="card-line">📍 <b>Lots 3, 4 &amp; 37 Peter&#x27;s Rock, Woodford, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Strata Lot 15, Apartment 207, Block F, Oaklands, 114 1/2 - 116 Constant Spring Road, Kingston 8, St. Andrew</h3>
+          <div class="card-price">J$27M</div>
+          <div class="card-line">📍 <b>Strata Lot 15, Apartment 207, Block F, Oaklands, 114 1/2 - 116 Constant Spring Road, Kingston 8, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">8 ½ Worthington Terrace, Kingston 5, St. Andrew</h3>
+          <div class="card-price">J$120M</div>
+          <div class="card-line">📍 <b>8 ½ Worthington Terrace, Kingston 5, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Strata Lot 11 Chateau De Chanel, 15 Seaview Avenue, Kingston 10, St. Andrew</h3>
+          <div class="card-price">J$48M</div>
+          <div class="card-line">📍 <b>Strata Lot 11 Chateau De Chanel, 15 Seaview Avenue, Kingston 10, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 16 Heavenly Heights, Cedar Valley, Red Hills, St. Andrew</h3>
+          <div class="card-price">J$24M</div>
+          <div class="card-line">📍 <b>Lot 16 Heavenly Heights, Cedar Valley, Red Hills, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Strata Lot 6, &quot;The Promenade Residential Country Club&quot;, 60 Sunset Avenue, Cherry Gardens, Kingston 8, St. Andrew</h3>
+          <div class="card-price">J$50M</div>
+          <div class="card-line">📍 <b>Strata Lot 6, &quot;The Promenade Residential Country Club&quot;, 60 Sunset Avenue, Cherry Gardens, Kingston 8, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Strata Lot 16, 2 Sandale Drive, Kingston 8, St. Andrew</h3>
+          <div class="card-price">J$30M</div>
+          <div class="card-line">📍 <b>Strata Lot 16, 2 Sandale Drive, Kingston 8, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Strata Lot #10, 77 Sunrise Crescent, Kingston 19, St. Andrew</h3>
+          <div class="card-price">J$59M</div>
+          <div class="card-line">📍 <b>Strata Lot #10, 77 Sunrise Crescent, Kingston 19, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 29 Stony Hill Terrace, Stony Hill, St. Andrew</h3>
+          <div class="card-price">J$64M</div>
+          <div class="card-line">📍 <b>Lot 29 Stony Hill Terrace, Stony Hill, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 21 Diamond Close, Diamond Court, Stony Hill, Kingston 9, St. Andrew</h3>
+          <div class="card-price">J$95M</div>
+          <div class="card-line">📍 <b>Lot 21 Diamond Close, Diamond Court, Stony Hill, Kingston 9, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot #15 Bellevue Drive, Bellevue, St. Andrew</h3>
+          <div class="card-price">J$47M</div>
+          <div class="card-line">📍 <b>Lot #15 Bellevue Drive, Bellevue, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">3 &amp; 5 Laws Street, St. Andrew</h3>
+          <div class="card-price">J$110M</div>
+          <div class="card-line">📍 <b>3 &amp; 5 Laws Street, St. Andrew</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Strata Lot 39 Crane Ridge Estate, Dacosta Drive, Ocho Rios, St. Ann</h3>
+          <div class="card-price">J$37M</div>
+          <div class="card-line">📍 <b>Strata Lot 39 Crane Ridge Estate, Dacosta Drive, Ocho Rios, St. Ann</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 93 Home Castle, Section 2, Stewart Town, St. Ann</h3>
+          <div class="card-price">J$10.5M</div>
+          <div class="card-line">📍 <b>Lot 93 Home Castle, Section 2, Stewart Town, St. Ann</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 486 Belle Air Phase 3, Runaway Bay, St. Ann</h3>
+          <div class="card-price">J$50M</div>
+          <div class="card-line">📍 <b>Lot 486 Belle Air Phase 3, Runaway Bay, St. Ann</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🏢</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Apt 6 Escape Villas, Part of Crescent Park, Golden Grove P.O, St. Ann</h3>
+          <div class="card-price">J$12M</div>
+          <div class="card-line">📍 <b>Apt 6 Escape Villas, Part of Crescent Park, Golden Grove P.O, St. Ann</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 724 Phoenix Park Village 2, Phase 2, Bernard Lodge, Greater Portmore, St. Catherine</h3>
+          <div class="card-price">J$27.5M</div>
+          <div class="card-line">📍 <b>Lot 724 Phoenix Park Village 2, Phase 2, Bernard Lodge, Greater Portmore, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">17 Nugent Street, Land Part of Browns Town, Ewarton, St. Catherine</h3>
+          <div class="card-price">J$7M</div>
+          <div class="card-line">📍 <b>17 Nugent Street, Land Part of Browns Town, Ewarton, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Part of Cocoa Walk called New Purchase, Barton&#x27;s, St. Catherine</h3>
+          <div class="card-price">J$35M</div>
+          <div class="card-line">📍 <b>Part of Cocoa Walk called New Purchase, Barton&#x27;s, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 61 Rose Villa Drive, Rose Hall, Linstead, St. Catherine</h3>
+          <div class="card-price">J$20.4M</div>
+          <div class="card-line">📍 <b>Lot 61 Rose Villa Drive, Rose Hall, Linstead, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 353 Hill Run, Spanish Town, St. Catherine</h3>
+          <div class="card-price">J$14M</div>
+          <div class="card-line">📍 <b>Lot 353 Hill Run, Spanish Town, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot # 5 West Montaque Heights, Part of Lot #4 Beckford Farm and Spencers Pen, Spanish Town, St. Catherine</h3>
+          <div class="card-price">J$38M</div>
+          <div class="card-line">📍 <b>Lot # 5 West Montaque Heights, Part of Lot #4 Beckford Farm and Spencers Pen, Spanish Town, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🏠</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Cudjoe Hill, Watermount, St. Catherine</h3>
+          <div class="card-price">J$40M</div>
+          <div class="card-line">📍 <b>Cudjoe Hill, Watermount, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🏬</div></div>
+        <div class="card-body">
+          <h3 class="card-title">66A Brunswick Ave, Spanish Town, St. Catherine</h3>
+          <div class="card-price">J$108M</div>
+          <div class="card-line">📍 <b>66A Brunswick Ave, Spanish Town, St. Catherine</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">18 Beadle Drive, Santa Cruz, St. Elizabeth</h3>
+          <div class="card-price">J$14M</div>
+          <div class="card-line">📍 <b>18 Beadle Drive, Santa Cruz, St. Elizabeth</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 61, 22 Upper Retreat, Windsor Heights, Santa Cruz, St. Elizabeth</h3>
+          <div class="card-price">J$5.5M</div>
+          <div class="card-line">📍 <b>Lot 61, 22 Upper Retreat, Windsor Heights, Santa Cruz, St. Elizabeth</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Part of Lower Works Pen, Black River, St. Elizabeth</h3>
+          <div class="card-price">J$20M</div>
+          <div class="card-line">📍 <b>Part of Lower Works Pen, Black River, St. Elizabeth</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Land Part of Santa Cruz, Sydney Pagon Drive, Santa Cruz, St. Elizabeth</h3>
+          <div class="card-price">J$33.6M</div>
+          <div class="card-line">📍 <b>Land Part of Santa Cruz, Sydney Pagon Drive, Santa Cruz, St. Elizabeth</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Lot 16 Land part of Cheltenham, St. Elizabeth</h3>
+          <div class="card-price">J$4.5M</div>
+          <div class="card-line">📍 <b>Lot 16 Land part of Cheltenham, St. Elizabeth</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🌳</div></div>
+        <div class="card-body">
+          <h3 class="card-title">Comma Pen, Ballards Valley District, Junction, St. Elizabeth</h3>
+          <div class="card-price">J$39M</div>
+          <div class="card-line">📍 <b>Comma Pen, Ballards Valley District, Junction, St. Elizabeth</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Audi Q5</h3>
+          <div class="card-price">J$7,200,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Audi A3</h3>
+          <div class="card-price">J$5,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Audi A3</h3>
+          <div class="card-price">J$4,700,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Audi Q7</h3>
+          <div class="card-price">J$15,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2014 BMW 320I</h3>
+          <div class="card-price">J$1,750,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2017 BMW 420I</h3>
+          <div class="card-price">J$2,900,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2019 BMW 430I Cabrio</h3>
+          <div class="card-price">J$4,900,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2019 BMW X1</h3>
+          <div class="card-price">J$3,100,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2019 BMW X3 - Xdrive</h3>
+          <div class="card-price">J$4,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2017 BMW X3</h3>
+          <div class="card-price">J$2,600,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2021 BMW X4</h3>
+          <div class="card-price">J$9,000,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2019 BMW X5</h3>
+          <div class="card-price">J$8,200,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 BMW X5</h3>
+          <div class="card-price">J$11,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2020 Ford Ecosport</h3>
+          <div class="card-price">J$2,700,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Ford Everest</h3>
+          <div class="card-price">J$7,900,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🛻</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Ford Ranger Rapture</h3>
+          <div class="card-price">J$9,000,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Foton Auman</h3>
+          <div class="card-price">J$15,000,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2024 Great Wall Haval H6</h3>
+          <div class="card-price">J$6,800,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2025 Greatwall Haval</h3>
+          <div class="card-price">J$6,000,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2012 Honda Accord</h3>
+          <div class="card-price">J$900,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Honda Accord</h3>
+          <div class="card-price">J$5,100,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Honda BRV</h3>
+          <div class="card-price">J$4,400,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2024 Honda BRV</h3>
+          <div class="card-price">J$4,700,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2017 Honda Civic</h3>
+          <div class="card-price">J$2,100,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2019 Honda CRV</h3>
+          <div class="card-price">J$4,000,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Honda CRV</h3>
+          <div class="card-price">J$5,700,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Honda CRV</h3>
+          <div class="card-price">J$5,900,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Honda CRV</h3>
+          <div class="card-price">J$7,000,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2018 Honda Fit</h3>
+          <div class="card-price">J$1,750,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2018 Honda Fit Shuttle</h3>
+          <div class="card-price">J$700,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2018 Honda Fit Shuttle</h3>
+          <div class="card-price">J$1,800,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2018 Honda Fit Shuttle</h3>
+          <div class="card-price">J$1,350,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2021 Hyundai Santa Fe</h3>
+          <div class="card-price">J$4,900,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Hyundai Tucson</h3>
+          <div class="card-price">J$4,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2023 Hyundai Tucson</h3>
+          <div class="card-price">J$4,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2024 Hyundai Tucson</h3>
+          <div class="card-price">J$7,200,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2018 Jeep Wrangler</h3>
+          <div class="card-price">J$9,700,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Kia Seltos</h3>
+          <div class="card-price">J$3,600,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2021 Kia Soluto</h3>
+          <div class="card-price">J$2,100,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="card-top"><div class="card-emoji">🚗</div></div>
+        <div class="card-body">
+          <h3 class="card-title">2022 Kia Soluto</h3>
+          <div class="card-price">J$2,500,000</div>
+          <div class="card-line">📍 <b>45-47 Constant Spring Road, Kingston 10</b></div>
+          <span class="bank-badge">🏦 NCB (National Commercial Bank)</span>
+        </div>
+        <div class="card-btns">
+          <a class="btn-go" href="https://www.jncb.com/" rel="nofollow noopener" target="_blank">🌐 Visit site</a>
+        </div>
+      </article>
+      BUILD:CARDS:END -->
+    </div>
     <p id="emptyMsg" class="empty hidden">Nothing here yet. Try the other button, or run the program to load the lists. 🙂</p>
   </main>
 
@@ -111,6 +2721,41 @@
     <h2>⬇️ Download the full lists</h2>
     <p class="sources-help">Prefer the original? Each bank and credit union's complete list is here — one place to view it online or save the file. No need to download from every card.</p>
     <div id="sourceList" class="source-list"></div>
+  </section>
+
+  <!-- ======================= BROWSE BY CATEGORY ======================= -->
+  <nav class="browse-more" aria-label="Browse by category">
+    <a href="cars.html">🚗 Browse all repossessed cars &amp; trucks</a>
+    <a href="houses.html">🏠 Browse all repossessed houses &amp; land</a>
+    <a href="stats.html">📊 See the statistics</a>
+  </nav>
+
+  <!-- ======================= FAQ (crawlable, matches FAQPage schema) ======================= -->
+  <section class="faq" id="faq">
+    <h2>Frequently asked questions</h2>
+    <details>
+      <summary>What is a repossessed car or house in Jamaica?</summary>
+      <p>A repossessed car or house is a vehicle or property that a Jamaican bank or credit union has taken back
+        because the previous owner could not keep up the loan payments. The lender then sells it — often by private
+        treaty or auction — to recover the money owed, which is why these listings are frequently priced below the
+        open market.</p>
+    </details>
+    <details>
+      <summary>How do I buy a repossessed vehicle or property in Jamaica?</summary>
+      <p>Find the listing you want, click <b>Visit site</b> to open the bank or credit union's own page, then contact
+        that institution directly to arrange a viewing, make an offer, or place a bid. Always confirm the price,
+        condition and title details with the lender before you buy.</p>
+    </details>
+    <details>
+      <summary>Which banks and credit unions are included?</summary>
+      <p>We gather listings from 12 sources, including NCB (National Commercial Bank), JMMB, Sagicor, JN Bank,
+        First Global Bank, Scotiabank, JPS &amp; Employees Co-operative Credit Union and more.</p>
+    </details>
+    <details>
+      <summary>Is Repossessed Jamaica free to use?</summary>
+      <p>Yes. Repossessed Jamaica is completely free. It simply collects the repossessed house and car lists that
+        Jamaican banks already publish and puts them in one searchable place.</p>
+    </details>
   </section>
 
   <footer class="foot">

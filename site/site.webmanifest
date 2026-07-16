@@ -1,0 +1,16 @@
+{
+  "name": "Repossessed Jamaica",
+  "short_name": "Repo Deals JA",
+  "description": "Repossessed houses, land, cars and trucks for sale by Jamaican banks and credit unions — all in one searchable place.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0c111b",
+  "theme_color": "#009b3a",
+  "lang": "en-JM",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

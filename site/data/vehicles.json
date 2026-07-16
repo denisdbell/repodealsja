@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-07 13:48 UTC",
+  "generated": "2026-07-15 19:37 UTC",
   "count": 200,
   "items": [
     {
@@ -3707,23 +3707,6 @@
       "body": ""
     },
     {
-      "title": "2019 Nissan AD WAGON",
-      "price": "J$630,000",
-      "location": "Jamzone Ltd., 78B Hagley Park Road, Kingston 10",
-      "details": {
-        "Description": "$630,000 MSRP: $630,000 2019 NISSAN AD WAGON Location: Jamzone Ltd., 78B Hagley Park Road, Kingston 10 125,234 mi White Automatic"
-      },
-      "bank": "JN Bank",
-      "category": "vehicle",
-      "parent_url": "https://vehicles.jnbank.com/",
-      "file_url": "https://vehicles.jnbank.com/",
-      "download_file": "files/jn-vehicles.html",
-      "make": "Nissan",
-      "model": "AD WAGON",
-      "year": "2019",
-      "body": ""
-    },
-    {
       "title": "2017 Honda GRACE HYBRID",
       "price": "J$780,000",
       "location": "Jamzone Ltd., 78B Hagley Park Road, Kingston 10",
@@ -3772,6 +3755,23 @@
       "make": "Honda",
       "model": "FIT DOHC",
       "year": "2022",
+      "body": ""
+    },
+    {
+      "title": "2021 Nissan SYLPHY",
+      "price": "J$1,510,000",
+      "location": "A1 Wrecking, 120 Maxfield Ave., Kingston",
+      "details": {
+        "Description": "$1,510,000 MSRP: $1,510,000 2021 NISSAN SYLPHY X Location: A1 Wrecking, 120 Maxfield Ave., Kingston 60,487 mi GREY Automatic"
+      },
+      "bank": "JN Bank",
+      "category": "vehicle",
+      "parent_url": "https://vehicles.jnbank.com/",
+      "file_url": "https://vehicles.jnbank.com/",
+      "download_file": "files/jn-vehicles.html",
+      "make": "Nissan",
+      "model": "SYLPHY",
+      "year": "2021",
       "body": ""
     },
     {

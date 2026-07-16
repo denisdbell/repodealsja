@@ -124,6 +124,26 @@ body {
   flex-direction: column;
   border: 3px solid #eef2f0;
 }
+/* In-feed sponsored tile — occupies one grid cell like a listing card so the
+   ad blends into the feed. The In-feed ad unit itself is styled in AdSense to
+   mirror the card layout (image on top, title + text below). */
+.card-ad {
+  padding: 0;
+  overflow: hidden;
+  min-height: 200px;
+}
+.card-ad .ad-label {
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #9aa5a0;
+  text-align: center;
+  padding: 8px 0 2px;
+}
+.card-ad ins {
+  display: block;
+  width: 100%;
+}
 .card-top {
   background: linear-gradient(135deg, #eef7f1, #dfeede);
   padding: 20px;
@@ -406,3 +426,59 @@ body {
   box-shadow: var(--shadow);
 }
 .topbar-link:hover { filter: brightness(1.05); }
+
+/* ---------- SEO intro copy ---------- */
+.intro {
+  max-width: 900px;
+  margin: 18px auto 0;
+  padding: 0 20px;
+}
+.intro p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--ink);
+  opacity: .9;
+}
+
+/* ---------- Browse-by-category links ---------- */
+.browse-more {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.browse-more a {
+  background: var(--card);
+  border: 2px solid var(--green);
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.browse-more a:hover { background: var(--green); color: #fff; }
+
+/* ---------- FAQ ---------- */
+.faq {
+  max-width: 900px;
+  margin: 34px auto 0;
+  padding: 0 20px;
+}
+.faq h2 { font-size: 1.5rem; margin: 0 0 14px; }
+.faq details {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.faq details p { margin: 12px 0 4px; opacity: .9; }
